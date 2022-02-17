@@ -8,7 +8,7 @@
 rating = list(range(0, 11))
 rating_new = rating[1: 11]
 rating_new.reverse()                        # невозрастающий набор чисел
-print('Рейтинг - ведущая десятка (по убыванию):', len(rating_new), 'el')
+print('Рейтинг - ведущая десятка:', len(rating), 'el')
 print(rating_new)
 print()
 n = 1
@@ -17,4 +17,3 @@ while n < 9:
     n = rating_new.index(your_elem)
     rating_new.insert(n+1, your_elem)
     print(rating_new[:10])
-
