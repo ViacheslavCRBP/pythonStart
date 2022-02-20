@@ -15,4 +15,3 @@ def sum_func(n_1, n_2, n_3):
     return n_1 + n_2 + n_3 - n_3
 print('Сумма двух наибольших аргументов: ', sum_func(result[0], result[1], result[2]))
 
-

@@ -23,7 +23,6 @@ def degree_func(n_1, n_2):
     return n_1 ** n_2
 print('X**Y =', degree_func(x, y))
 
-
 # создаем функцию для расчета через цикл (Вариант 2):
 # могу понять, почему она не считает?
 def degree_func(n_1, n_2):

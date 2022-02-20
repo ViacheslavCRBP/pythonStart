@@ -25,6 +25,7 @@ def user_data_2():
     print(name, surname, ':', year, city, email, phone)
 user_data_2()
 
+
 # Variant 3 - неопределённое число позиционных параметров
 print()
 def user_data_3(*data):
