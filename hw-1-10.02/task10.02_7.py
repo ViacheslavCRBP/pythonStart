@@ -27,7 +27,10 @@ else:
             a = a * 1.10
             day += 1
             distance = f'{a:.2f}'
-            print(f'{day}-й день: {distance} км')
+            result = '{}-й день: {} км'.format(day, distance)
+            print(result)
+            # print(f'{day}-й день: {distance} км')  # этот вариант тоже рабочий
         print(f'Ответ: на {day}-й день спортсмен достигнет результата — не менее {a:.2f} км.')
     else:
         print('Начните бегать хотя бы 1 км в день')
+
