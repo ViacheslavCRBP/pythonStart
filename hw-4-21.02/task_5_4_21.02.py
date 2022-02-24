@@ -10,17 +10,17 @@ from functools import reduce
 my_list = [i for i in range(100, 1001, 2)]  # создаем заданный список
 print('Список из чётных чисел от 100 до 1000 (включая границы): ', my_list)
 
-# Вариант 1 (как на уроке):
+# Вариант 1 - как на уроке:
 result = 1
 for i in my_list:
     result *= i
 result_1 = reduce(lambda a, b: a * b, my_list)
 print("Результат №1 произведения всех элементов списка: ", result_1)
 
-# Вариант 2:
+# Вариант 2 - самый простой:
 def add(x, y):
     return x * y
 print("Результат №2 произведения всех элементов списка: ", reduce(add, my_list))
 
-# Вариант 3:
-print("Результат №3 произведения всех элементов списка: ", str(reduce(lambda x, y: x * y, my_list)))
+# Вариант 3 - самый компактный:
+print("Результат №3 произведения всех элементов списка: ", reduce(lambda x, y: x * y, my_list))

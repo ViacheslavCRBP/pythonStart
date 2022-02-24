@@ -9,46 +9,42 @@
 # Например, в первом задании выводим целые числа, начиная с 3. При достижении числа 10 — завершаем цикл.
 # Вторым пунктом необходимо предусмотреть условие, при котором повторение элементов списка прекратится.
 
-import random
 from itertools import count, cycle
+import random
 
 n_1 = int(input('Число, с которого начать генерацию: '))
 n_2 = int(input('Число, на котором закончить генерацию: '))
-my_list = [i for i in range(n_1, n_2+1)]
+n_3 = int(input('Число повторов кругового списка: '))
+my_list = [el for el in range(n_1, n_2+1)]
+print('Список, из которого выбирается случайное число: ', my_list)
 print()
 
 # Вариант №1:
-print('Список, из которого выбирается случайное число: ', my_list)
-num_1 = random.choice(my_list)
-print('Случайное число по Варианту №1: ', num_1)
+el_count = count(n_1)
+print('Список по Варианту №1 (count): ')
+print([next(el_count) for el in range(n_2 - n_1 + 1)])
 print()
 
 # Вариант №2:
-print('Случайные числа по Варианту №2: ')
-for el_count in count(n_1):
-    if el_count == n_2:
-        break
-    else:
-        print(random.choice(my_list))
+el_cycle = cycle(my_list)
+print('Список по Варианту №2 (cycle - итератор, повторяющий элементы некоторого списка, определённого заранее):')
+print([next(el_cycle) for el in range((n_2 - n_1) * n_3)])
 print()
 
 # Вариант №3:
-el_cycle = cycle(my_list)
-print('Случайные числа по Варианту №3: ')
-print(next(el_cycle))
-print(next(el_cycle))
-print(next(el_cycle))
-print(next(el_cycle))
-print(next(el_cycle))
-print(next(el_cycle))
-print(next(el_cycle))
-print()
-
-# Вариант №4:
-print('Случайные числа по Варианту №4: ')
+print('Случайные числа по Варианту №3 (cycle): ')
 num_2 = 0
 for elem_cycle in cycle(my_list):
     if num_2 > n_2:
         break
     print(elem_cycle)
     num_2 += 1
+
+# Вариант №4:
+print('Случайные числа по Варианту №4 (random.choice): ')
+for el_count in count(n_1):
+    if el_count == n_2:
+        break
+    else:
+        print(random.choice(my_list))
+print()
