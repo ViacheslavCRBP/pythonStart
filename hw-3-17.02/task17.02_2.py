@@ -12,12 +12,12 @@ year = input('Введите год рождения: ')
 city = input('Введите город проживания: ')
 email = input('Введите е-майл: ')
 phone = input('Введите номер телефона: ')
+
 # Variant 1 - именованные параметры
 print()
 def user_data_1(data_1, data_2, data_3, data_4, data_5, data_6):
     print(f'{data_1} {data_2}: {data_3} года, г.{data_4}, e-mail:{data_5}; тел:{data_6}')
 user_data_1(data_1=name, data_2=surname, data_3=year, data_4=city, data_5=email, data_6=phone)
-
 
 # Другие варианты пказались более простыми и интересными:
 # Variant 2 - позиционные параметры
