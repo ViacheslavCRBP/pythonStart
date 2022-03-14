@@ -41,5 +41,6 @@ a = Matrix([[randint(0, 99) for _ in range(5)] for _ in range(5)])
 b = Matrix([[randint(0, 99) for _ in range(5)] for _ in range(5)])
 print(a)
 print(b)
+
 print('Матрица сумм:')
 print(a + b)

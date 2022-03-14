@@ -71,6 +71,7 @@ print(coat_2.rate)
 print(coat_3.rate)
 print(coat_4.rate)
 print(coat_5.rate)
+
 print('Всего ткани на 5 пальто:', sum_rate_coat(list_suits), 'm')
 
 print()
@@ -79,4 +80,5 @@ print(costume_2.rate)
 print(costume_3.rate)
 print(costume_4.rate)
 print(costume_5.rate)
+
 print('Всего ткани на 5 костюмов:', sum_rate_costume(list_costumes), 'm')
