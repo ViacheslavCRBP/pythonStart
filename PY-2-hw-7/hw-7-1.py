@@ -12,7 +12,7 @@
 
 import random
 
-n = int(input('Введите количество элементов массива:  '))
+n = int(input('Введите количество элементов массива: '))
 array = [random.randint(-100, 100) for _ in range(n)]
 print(array)
 print('*' * 50)

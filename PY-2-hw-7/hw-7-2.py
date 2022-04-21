@@ -6,7 +6,7 @@
 import random
 
 # Создаем массив
-n = int(input('Введите количество элементов массива:  '))
+n = int(input('Введите количество элементов массива: '))
 array = [random.randint(0, 50) for _ in range(n)]
 print(array)
 print('*' * 50)
